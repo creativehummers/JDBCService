@@ -1,0 +1,8 @@
+100001: Select * from healthsys_user where userid='skrish01'
+100100: Select * from healthsys_user where userid like '%skrish%'
+100010: Select * from healthsys_user where userid=?
+100110: select passcode, profile_category from healthsys_user hu join user_profile up on user_profile_code= up.uuid where userid=?
+100030: Select * from healthsys_user
+100050: Insert into healthsys_user ( uuid, first_name, last_name, userid , passcode , phone_number, email_id, user_profile_code , create_time, update_time, create_user_id, update_user_id, comment) values( '%1$s', '%2$s' , '%3$s' , '%4$s' , '%5$s' ,'%6$s' ,'%7$s' , '%8$s' , CURRENT_TIMESTAMP(3), CURRENT_TIMESTAMP(3), 'admin' , 'admin' , '%9$s')
+100070: Update healthsys_usr set passcode='%2$s', comment='updated passcode' where userid='%1$s'
+100072: Update healthsys_usr set phone_number='%2$s', email_id='%3$s' , comment='updated phone and email' where userid='%1$s'

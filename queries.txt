@@ -1,0 +1,20 @@
+100000: CREATE TABLE healthsys_user ( uuid VARCHAR(30) NOT NULL, userid VARCHAR NOT NULL,passcode VARCHAR NOT NULL, first_name VARCHAR NOT NULL,last_name VARCHAR NOT NULL, phone_number VARCHAR NOT NULL,email_id VARCHAR NOT NULL,active_ind VARCHAR NULL,user_profile_code VARCHAR NULL,group_primary_uuid VARCHAR(30) NULL,gender VARCHAR(8) NULL,date_of_birth DATE NULL,create_time TIMESTAMP NULL,update_time TIMESTAMP NULL,create_user_id VARCHAR(32) NULL,update_user_id VARCHAR(32) NULL,comment VARCHAR NULL,country VARCHAR NULL,state VARCHAR NULL,city VARCHAR NULL)
+111100: Select * from test_user where test_uid like '%skrish%'
+111200: Select * from test_user
+111210: Select * from test_user where test_uid like ?
+900000: CREATE TABLE test_user ( uuid VARCHAR(30) NOT NULL, test_uid VARCHAR NOT NULL,passcode VARCHAR NOT NULL, first_name VARCHAR NOT NULL,last_name VARCHAR NOT NULL, phone_number VARCHAR NOT NULL,email_id VARCHAR NOT NULL,active_ind VARCHAR NULL, test_profile_code VARCHAR NULL,group_primary_uuid VARCHAR(30) NULL,gender VARCHAR(8) NULL,date_of_birth DATE NULL,create_time TIMESTAMP NULL,update_time TIMESTAMP NULL,create_user_id VARCHAR(32) NULL,update_user_id VARCHAR(32) NULL,comment VARCHAR NULL)
+900001: CREATE TABLE user_profile (uuid VARCHAR(30) NOT NULL,profile_category VARCHAR(16) NOT NULL)
+XXXXXX: ,status VARCHAR(8) NOT NULL,department VARCHAR(32) NULL, medical_record_number VARCHAR(32) NOT NULL,dummy VARCHAR(64) NOT NULL,create_source VARCHAR(32) NULL,user_authorizations VARCHAR(255) NULL,meeting_link VARCHAR(255) NOT NULL,assigner_ind VARCHAR(8) NULL,create_time TIMESTAMP NULL,update_time TIMESTAMP NULL,create_user_id VARCHAR(32) NULL,update_user_id VARCHAR(32) NULL,comment VARCHAR NULL,record_deactivation_code VARCHAR(5) NULL,occupation VARCHAR NULL
+100001: Select * from test_user where test_uid='skrish01'
+100100: Select * from test_user where test_uid like '%skrish%'
+100010: Select * from test_user where test_uid=?
+100110: select passcode, profile_category from test_user hu join user_profile up on test_profile_code= up.uuid where test_uid=?
+100030: Select * from test_user
+100500: Insert into test_user ( uuid, first_name, last_name, test_uid , passcode , phone_number, email_id, test_profile_code , create_time, update_time, create_user_id, update_user_id, comment) values( ?, ? , ? , ? , ? , ? ,? , ? , CURRENT_TIMESTAMP(3), CURRENT_TIMESTAMP(3), 'admin' , 'admin' , ?)
+100501: Insert into test_user ( uuid, first_name, last_name, test_uid , passcode, phone_number, email_id, test_profile_code , create_time, update_time, create_user_id, update_user_id, comment) values( ?, ? , ? , ? , ? , ? , ?, ? , CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, 'admin' , 'admin' , ? )
+100511: Insert into user_profile ( uuid, profile_category) values( ?, ? )
+100700: Update test_user set passcode=?, comment='updated passcode' where test_uid=?
+100710: Update test_user set passcode=?, comment='updated passcode' where userid=?
+100720: Update test_user set phone_number=?, email_id=? , comment='updated phone and email' where test_uid=?
+100900: Delete from test_user where test_uid=?
+200100: "Select * from test_user;\r\n\r\n--Comment Line\r\nSelect * from user_profile;\r\n\r\n"
