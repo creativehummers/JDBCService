@@ -23,13 +23,13 @@
     </Appenders>
     <Loggers>
         <Logger name="QueryExecutionReporter" level="trace" additivity="true">
-            <AppenderRef ref="QueryExecutionFile"/>
+            <AppenderRef ref="STDOUT"/>
         </Logger>
         <Logger name="org.apache.logging.log4j.test2" level="debug" additivity="false">
-            <AppenderRef ref="File"/>
+            <AppenderRef ref="STDOUT"/>
         </Logger>
         <Root level="info">
-            <AppenderRef ref="FLOW"/>
+            <AppenderRef ref="STDOUT"/>
         </Root>
     </Loggers>
 </Configuration>
